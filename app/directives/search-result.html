@@ -1,0 +1,22 @@
+<!--
+Directive template for the search results
+-->
+<div class="grid-item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="result">
+    <div class="media">
+      <img ng-src="https://farm{{ photo.farm }}.staticflickr.com/{{ photo.server }}/{{ photo.id }}_{{ photo.secret }}_q.jpg" />
+    </div>
+    <div class="media-body">
+      <p>
+        <a href="{{ photo.details.urls.url[0]._content }}">{{ photo.details.title._content | subIfEmpty:"No name" | trim:50}}</a>
+        by 
+        <a href="https://www.flickr.com/people/{{ photo.owner }}">{{photo.details.owner.realname | subIfEmpty:photo.details.owner.username | trim:50}} </a>
+      </p>
+      <p ng-if="photo.details.description._content">
+        <label>Description:</label>
+        {{ photo.details.description._content | htmlToPlaintext | trim:150}}
+      </p>
+      <small class="tag label label-info returned-tag" ng-repeat="tag in photo.details.tags.tag">{{ tag.raw }}</small>
+    </div>
+  </div>
+</div>

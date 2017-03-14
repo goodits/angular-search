@@ -1,0 +1,20 @@
+<div ng-app="flickrSearchApp" ng-controller="flickrSearchCtrl"> 
+  <div class="search">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="search-inner">
+          <h1>A "Kent-ish" Flickr Photo Stream</h1>
+          <div search-input on-change="newSearch()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div back-to-top></div>
+  <div class="results">
+    <div class="container-fluid">
+      <div class="row">
+        <div search-results></div>
+      </div>
+    </div>
+  </div>
+</div>

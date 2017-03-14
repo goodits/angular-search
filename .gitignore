@@ -1,0 +1,15 @@
+# ignore node_modules folder
+node_modules
+bower_components
+
+# ignore local project files
+nbproject
+.DS_Store
+
+# ignore caches
+.divshot-cache/
+.sass-cache
+
+# ignore app files
+app/bower_components
+app/css/app.css

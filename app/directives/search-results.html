@@ -1,0 +1,9 @@
+<!--
+Directive template for the search results
+-->
+<div class="grid" infinite-scroll="getNextPage()" infinite-scroll-distance="1">
+  <div class="grid-sizer col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+  <div ng-repeat="photo in photos track by $index">
+    <div search-result style="opacity: 0;"></div>
+  </div>
+</div>
